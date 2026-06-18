@@ -1,0 +1,28 @@
+# Agent / local tooling
+.claude/
+.superpowers/
+
+# Local docs (not for repo)
+docs/
+
+# Environment (keep .env.example tracked)
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*

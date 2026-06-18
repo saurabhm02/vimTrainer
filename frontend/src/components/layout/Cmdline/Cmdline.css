@@ -1,0 +1,17 @@
+.cmdline {
+  height: var(--lh);
+  min-height: var(--lh);
+  background: var(--bg);
+  border-top: 1px solid #0f0f0f;
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+  font-size: 13px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.cmdline--idle      .cmdline__text { color: var(--dim); }
+.cmdline--correct   .cmdline__text { color: var(--green); }
+.cmdline--incorrect .cmdline__text { color: var(--red); }
+.cmdline--info      .cmdline__text { color: var(--muted); }

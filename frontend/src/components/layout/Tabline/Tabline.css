@@ -1,0 +1,49 @@
+.tabline {
+  height: var(--lh);
+  background: var(--bg2);
+  border-bottom: 1px solid var(--sep);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.tabline__logo {
+  color: var(--dim);
+  padding: 0 1ch;
+  flex-shrink: 0;
+}
+
+.tabline__divider {
+  color: var(--sep);
+  flex-shrink: 0;
+}
+
+.tabline__tab {
+  color: var(--dim);
+  padding: 0 1.5ch;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5ch;
+  text-decoration: none;
+  border-right: 1px solid var(--sep);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.tabline__tab:hover { color: var(--muted); }
+
+.tabline__tab--active {
+  color: var(--text);
+  background: var(--bg);
+}
+
+.tabline__tab--locked { opacity: 0.7; }
+
+.tabline__lock {
+  color: var(--dim);
+  font-size: 10px;
+  line-height: 1;
+}

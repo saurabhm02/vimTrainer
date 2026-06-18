@@ -1,0 +1,34 @@
+.buf-pane {
+  display: flex;
+  flex: 1;
+  overflow-y: auto;
+  min-width: 0;
+}
+
+.buf-gutter {
+  width: 4ch;
+  padding-right: 1ch;
+  color: var(--ln);
+  text-align: right;
+  user-select: none;
+  flex-shrink: 0;
+  font-size: 13px;
+  line-height: var(--lh);
+}
+
+.buf-ln       { height: var(--lh); display: flex; align-items: center; justify-content: flex-end; }
+.buf-ln--cur  { color: var(--ln-cur); }
+.buf-ln--tilde { color: transparent; }
+
+.buf-content {
+  flex: 1;
+  padding-left: 1ch;
+  font-size: 13px;
+  line-height: var(--lh);
+  min-width: 0;
+}
+
+.buf-line          { height: var(--lh); display: flex; align-items: center; white-space: pre; min-width: 0; }
+.buf-line--active  { background: rgba(255,255,255,0.03); }
+.buf-line--dim     { color: var(--dim); }
+.buf-line--tilde   { color: #2a2a2a; }

@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS settings;
+DROP TABLE IF EXISTS daily_queues;
+DROP TABLE IF EXISTS user_achievements;
+DROP TABLE IF EXISTS achievements;
+DROP TABLE IF EXISTS spaced_repetition_records;
+DROP TABLE IF EXISTS practice_attempts;
+DROP TABLE IF EXISTS practice_sessions;
+DROP TABLE IF EXISTS keymaps;
+DROP TABLE IF EXISTS keymap_sources;
+DROP TABLE IF EXISTS users;

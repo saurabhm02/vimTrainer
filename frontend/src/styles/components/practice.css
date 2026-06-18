@@ -1,0 +1,362 @@
+/* ── Auth Pages (terminal-native) ── */
+.auth-shell {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+
+.auth-term {
+  width: 52ch;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.auth-term__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--lh);
+  margin-bottom: calc(var(--lh) * 0.5);
+}
+
+.auth-term__logo {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0;
+}
+
+.auth-term__logo-acc { color: var(--acc); }
+
+.auth-term__rule {
+  height: 1px;
+  background: var(--sep);
+  margin: calc(var(--lh) * 0.5) 0;
+}
+
+.auth-term__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.auth-term__row {
+  display: flex;
+  align-items: center;
+  height: var(--lh);
+  gap: 2ch;
+}
+
+.auth-term__label {
+  color: var(--dim);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  min-width: 10ch;
+  flex-shrink: 0;
+}
+
+.auth-term__input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--sep);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  height: var(--lh);
+  outline: none;
+  padding: 0;
+  line-height: var(--lh);
+  border-radius: 0;
+}
+
+.auth-term__input:focus {
+  border-bottom-color: var(--acc);
+}
+
+.auth-term__input::placeholder {
+  color: var(--ln);
+}
+
+.auth-term__error {
+  color: var(--red);
+  font-size: 12px;
+  padding: calc(var(--lh) * 0.25) 0;
+  margin-left: 12ch;
+}
+
+.auth-term__submit {
+  background: none;
+  border: none;
+  color: var(--acc);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  margin-top: calc(var(--lh) * 0.25);
+  height: var(--lh);
+}
+
+.auth-term__submit:hover { color: var(--hi); }
+.auth-term__submit:disabled { color: var(--dim); cursor: default; }
+
+.auth-term__footer {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: calc(var(--lh) * 0.5);
+}
+
+.auth-term__link {
+  color: var(--acc);
+  text-decoration: none;
+}
+.auth-term__link:hover { color: var(--hi); }
+
+/* ── Practice Page (terminal layout) ── */
+.practice-shell {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.practice-desc {
+  color: var(--hi);
+  font-size: 13px;
+}
+
+.practice-typed {
+  color: var(--text);
+}
+
+.practice-answer {
+  opacity: 0.15;
+  transition: opacity 0.15s ease-out;
+}
+
+.practice-answer--revealed {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .practice-answer { transition: none; }
+}
+
+/* ── Flow Page ── */
+.flow-shell {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.flow-past,
+.flow-next {
+  color: var(--dim);
+  font-size: 13px;
+}
+
+.flow-current {
+  color: var(--hi);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.flow-current-desc {
+  color: var(--muted);
+}
+
+.flow-typed {
+  color: var(--acc);
+}
+
+.flow-kb-dim {
+  color: var(--muted);
+}
+
+/* ── Recall Page ── */
+.recall-shell {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.recall-prompt {
+  display: inline-flex;
+  align-items: center;
+}
+
+.recall-answer {
+  color: var(--hi);
+  font-size: 13px;
+}
+
+/* ── Stats Page ── */
+.stats-shell {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.stats-spark {
+  color: var(--acc);
+  letter-spacing: 0;
+}
+
+.stats-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+  font-size: 13px;
+}
+
+.stats-bar-label {
+  color: var(--muted);
+  min-width: 10ch;
+}
+
+.stats-bar {
+  color: var(--acc);
+  letter-spacing: 0;
+}
+
+.stats-session-row {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ── Editor Page ── */
+.editor-shell {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.editor-instruction {
+  color: var(--hi);
+  font-size: 13px;
+}
+
+.editor-cur-line {
+  background: var(--bg3);
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+
+.editor-typed {
+  font-size: 13px;
+}
+
+/* ── Settings Page ── */
+.settings-shell {
+  display: flex;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.settings-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 1ch;
+  font-size: 13px;
+}
+
+.settings-opt {
+  cursor: pointer;
+  color: var(--dim);
+}
+.settings-opt--active { color: var(--text); }
+.settings-opt--active .setup-key { color: var(--acc); border-color: var(--acc); }
+
+.settings-toggle-btn {
+  cursor: pointer;
+  color: var(--dim);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+.settings-toggle-btn--on { color: var(--green); }
+
+.settings-inline-form {
+  display: inline-flex;
+  align-items: center;
+  gap: 1ch;
+  font-size: 13px;
+}
+
+.settings-inline-input {
+  background: var(--bg2);
+  border: 1px solid var(--sep);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 0 1ch;
+  height: var(--lh);
+  outline: none;
+  border-radius: 0;
+  min-width: 24ch;
+}
+.settings-inline-input:focus { border-color: var(--acc); }
+
+/* ── Import Page ── */
+.import-shell {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.import-buf-area {
+  padding-left: 4ch;
+  width: 100%;
+}
+
+.import-textarea {
+  width: 100%;
+  max-width: 60ch;
+  background: var(--bg2);
+  border: 1px solid var(--sep);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: var(--lh);
+  padding: 0.5ch 1ch;
+  outline: none;
+  resize: vertical;
+  border-radius: 0;
+}
+.import-textarea:focus { border-color: var(--acc); }
+
+.import-source-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 1ch;
+  font-size: 13px;
+}
+
+.import-source-name {
+  color: var(--text);
+}
+
+.import-delete-btn {
+  background: none;
+  border: none;
+  color: var(--red);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+}
+.import-delete-btn:hover { color: var(--hi); }
+.import-delete-btn:disabled { color: var(--dim); cursor: default; }

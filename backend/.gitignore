@@ -1,0 +1,8 @@
+# Binaries
+bin/
+*.exe
+*.out
+server
+
+# Go
+vendor/

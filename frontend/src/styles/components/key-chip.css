@@ -1,0 +1,67 @@
+/* The central design motif — physical keyboard key appearance */
+.key-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  line-height: var(--leading-snug);
+  padding: 2px 6px;
+  min-width: 24px;
+  border-radius: var(--radius-sm);
+  background: var(--key-bg);
+  color: var(--key-text);
+  /* Bottom border is thicker: creates 3D depth illusion of a physical key */
+  border-width: 1px 1px 3px 1px;
+  border-style: solid;
+  border-color: var(--key-border) var(--key-border) var(--key-shadow) var(--key-border);
+  white-space: nowrap;
+  -webkit-user-select: none;
+  user-select: none;
+  letter-spacing: var(--tracking-normal);
+  vertical-align: middle;
+}
+
+.key-chip--leader {
+  background: var(--key-leader-bg);
+  color: var(--key-leader-text);
+  border-color: var(--key-leader-border) var(--key-leader-border) var(--key-leader-border) var(--key-leader-border);
+  border-width: 1px 1px 3px 1px;
+}
+
+.key-chip--modifier {
+  background: var(--key-modifier-bg);
+  color: var(--key-modifier-text);
+  border-color: var(--key-modifier-border) var(--key-modifier-border) var(--key-modifier-border) var(--key-modifier-border);
+  border-width: 1px 1px 3px 1px;
+  font-size: var(--text-xs);
+}
+
+.key-chip--special {
+  font-size: var(--text-xs);
+  padding: 2px 8px;
+  color: var(--text-secondary);
+}
+
+.key-chip--lg {
+  font-size: var(--text-md);
+  padding: 4px 10px;
+  min-width: 32px;
+  border-radius: var(--radius-md);
+  border-width: 1px 1px 4px 1px;
+}
+
+.key-chip--sm {
+  font-size: 10px;
+  padding: 1px 4px;
+  min-width: 18px;
+}
+
+/* Key sequence: horizontal row of chips */
+.key-sequence {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-wrap: nowrap;
+}

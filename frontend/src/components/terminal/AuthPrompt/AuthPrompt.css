@@ -1,0 +1,28 @@
+.auth-prompt-wrap {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.auth-prompt__actions {
+  display: flex;
+  align-items: center;
+  gap: 2ch;
+}
+
+.auth-prompt__btn {
+  color: var(--acc);
+  border: 1px solid var(--acc-muted);
+  padding: 0 1ch;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  height: calc(var(--lh) - 2px);
+  border-radius: 0;
+}
+.auth-prompt__btn:hover {
+  background: var(--acc-muted);
+  color: var(--hi);
+}

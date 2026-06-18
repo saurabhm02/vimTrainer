@@ -1,0 +1,42 @@
+.statusline {
+  height: var(--lh);
+  min-height: var(--lh);
+  background: var(--bg3);
+  border-top: 1px solid var(--sep);
+  display: flex;
+  align-items: stretch;
+  font-size: 12px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.sl-mode {
+  padding: 0 1ch;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.sl-mode--editor   { background: var(--mode-editor);   color: #000; }
+.sl-mode--practice { background: var(--mode-practice); color: #000; }
+.sl-mode--flow     { background: var(--mode-flow);     color: #000; }
+.sl-mode--recall   { background: var(--mode-recall);   color: #000; }
+.sl-mode--normal   { background: var(--bg3);           color: var(--muted); }
+.sl-mode--insert   { background: var(--green);         color: #000; }
+
+.sl-sep      { color: var(--dim); padding: 0 0.5ch; display: flex; align-items: center; flex-shrink: 0; }
+.sl-file     { color: var(--muted); display: flex; align-items: center; padding: 0 0.5ch; }
+.sl-category { color: var(--dim);   display: flex; align-items: center; padding: 0 0.5ch; }
+.sl-progress { color: var(--acc);   display: flex; align-items: center; padding: 0 0.5ch; }
+.sl-timing   { color: var(--dim);   display: flex; align-items: center; padding: 0 0.5ch; }
+.sl-right    { color: var(--dim);   display: flex; align-items: center; padding: 0 1ch; flex-shrink: 0; }
+
+.sl-accuracy { display: flex; align-items: center; padding: 0 0.5ch; }
+.sl-acc--green  { color: var(--green);  }
+.sl-acc--yellow { color: var(--yellow); }
+.sl-acc--red    { color: var(--red);    }
+
+.sl-spacer { flex: 1; }
