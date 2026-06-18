@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "pages:deploy": "npm run build && wrangler pages deploy dist --project-name=govim --branch=master"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.17.0",
@@ -24,6 +25,7 @@
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.2.1",
     "typescript": "^5.3.3",
-    "vite": "^5.0.11"
+    "vite": "^5.0.11",
+    "wrangler": "^4.101.0"
   }
 }

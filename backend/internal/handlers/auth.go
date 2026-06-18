@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"net/http"
+	"os"
 	"strings"
 	"time"
 
@@ -22,12 +23,23 @@ func NewAuthHandler(userRepo repository.UserRepository, settingsRepo repository.
 	return &AuthHandler{userRepo: userRepo, settingsRepo: settingsRepo, authSvc: authSvc}
 }
 
+func refreshCookieOptions() (secure bool, sameSite http.SameSite) {
+	if os.Getenv("ENVIRONMENT") == "production" {
+		return true, http.SameSiteNoneMode
+	}
+	return false, http.SameSiteLaxMode
+}
+
 func setRefreshCookie(c *gin.Context, token string) {
-	c.SetCookie("refresh_token", token, 30*24*60*60, "/", "", false, true)
+	secure, sameSite := refreshCookieOptions()
+	c.SetSameSite(sameSite)
+	c.SetCookie("refresh_token", token, 30*24*60*60, "/", "", secure, true)
 }
 
 func clearRefreshCookie(c *gin.Context) {
-	c.SetCookie("refresh_token", "", -1, "/", "", false, true)
+	secure, sameSite := refreshCookieOptions()
+	c.SetSameSite(sameSite)
+	c.SetCookie("refresh_token", "", -1, "/", "", secure, true)
 }
 
 type registerRequest struct {
